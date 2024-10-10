@@ -58,7 +58,7 @@
                         universities, this visualisation emphasises that 73.6% of undergraduates receive at least a 
                         part time job when they complete their degrees</p>
                 </div>
-                <div id="donut_chart" class="visualization"></div>
+                <div id="sankey" class="visualization"></div>
             </div>
         </section>
 
@@ -76,10 +76,10 @@
 
                 <div class="visualization-card">
                     <div class="visualization-text">
-                        <h2>Bubble Plot: Job Field vs Salary</h2>
+                        <h2>Does studying make you earn more?</h2>
                         <p>Explore the relationship between job fields and salary distribution using this bubble plot.</p>
                     </div>
-                    <div id="line_chart" class="visualization"></div>
+                    <div id="donut_chart" class="visualization"></div>
                 </div>
             </div>
         </section>
@@ -125,19 +125,23 @@
 
         }).catch(console.error);
 
-
         // Bar Chart
         vegaEmbed("#bar_chart","./visualisations/bar chart.json").then(function(result){
 
         }).catch(console.error);
 
         // Sankey Diagram
-        vegaEmbed("#donut_chart","./visualisations/sankey.json").then(function(result){
+        vegaEmbed("#sankey","./visualisations/sankey.json").then(function(result){
 
         }).catch(console.error);
 
         // heat map
         vegaEmbed("#heat_map","./visualisations/heatmap.json").then(function(result){
+
+        }).catch(console.error);
+
+        // heat map
+        vegaEmbed("#donut_chart","./visualisations/donut.json").then(function(result){
 
         }).catch(console.error);
     </script>
