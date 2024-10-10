@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "2D Heatmap showing Employment Rates with hover interaction",
+  "title": "Relationship Between Age, Education and Employment Rate in Australia",
+  "height": 300,
+  "width": 300,
+  "data": {
+    "url": "./data/expanded_education_employment_australia.csv"
+  },
+  "mark": {
+    "type": "rect",
+    "tooltip": true
+  },
+  "selection": {
+    "highlight": {"type": "single", "empty": "none", "on": "mouseover"}
+  },
+  "encoding": {
+    "x": {
+      "field": "Education Level",
+      "type": "ordinal",
+      "title": "Education Level",
+      "sort": ["No Qualification", "Certificate", "Diploma", "Bachelor", "Postgraduate"],
+      "axis": {"title": "Education Level", "labelAngle": -30}
+    },
+    "y": {
+      "field": "Age Group",
+      "type": "ordinal",
+      "title": "Age Group"
+    },
+    "color": {
+      "field": "Employment Rate",
+      "type": "quantitative",
+      "title": "Employment Rate (%)",
+      "scale": {"scheme": "blues"},
+      "condition": {
+        "selection": "highlight",
+        "value": "orange"
+      }
+    },
+    "opacity": {
+      "condition": {"selection": "highlight", "value": 1},
+      "value": 1
+    },
+    "tooltip": [
+      {"field": "Education Level", "type": "ordinal", "title": "Education Level"},
+      {"field": "Age Group", "type": "ordinal", "title": "Age Group"},
+      {"field": "Employment Rate", "type": "quantitative", "title": "Employment Rate (%)"},
+      {"field": "Unemployment Rate", "type": "quantitative", "title": "Unemployment Rate (%)"}
+    ]
+  }
+}
