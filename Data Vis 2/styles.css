@@ -1,0 +1,122 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(41, 41, 41);
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Sticky Header */
+.sticky-header {
+    top: 0;
+    color: white;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.sticky-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Yellow Background for Each Container */
+.visualization-section {
+    padding: 25px;
+    background-color: lightblue;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Full-width card for sections that take up most of the container */
+.full-width-card {
+    width: 100%; /* Full width card for large sections */
+}
+
+/* Flexbox for grouping two white cards inside one yellow section */
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Adjustable gap between the cards */
+}
+
+/* White Card Inside Each Container */
+.visualization-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Effect for the Outer Container */
+.visualization-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Text and Visualization Layout */
+.visualization-text {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.visualization-text h2 {
+    font-size: 22px;
+    color: #005792;
+    margin-bottom: 10px;
+}
+
+.visualization-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+.visualization {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-group {
+        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    }
+
+    .visualization {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .visualization {
+        height: 400px;
+    }
+}

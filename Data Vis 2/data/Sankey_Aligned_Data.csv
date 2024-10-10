@@ -1,0 +1,13 @@
+source,intermediate,target,value,units
+IT,Graduated,Full-time employment,8000,students
+IT,Graduated,Part-time employment,2500,students
+Engineering,Graduated,Full-time employment,12000,students
+Engineering,Graduated,Unemployment,500,students
+Health,Graduated,Full-time employment,16000,students
+Health,Graduated,Part-time employment,3500,students
+Business,Graduated,Unemployment,1000,students
+Business,Graduated,Full-time employment,14000,students
+Education,Graduated,Part-time employment,3500,students
+Education,Graduated,Unemployment,500,students
+Science,Graduated,Full-time employment,9000,students
+Science,Graduated,Unemployment,500,students
