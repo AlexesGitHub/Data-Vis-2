@@ -3,7 +3,7 @@
   "description": "2D Heatmap showing Employment Rates with hover interaction",
   "title": "Relationship Between Age, Education and Employment Rate in Australia",
   "height": 300,
-  "width": 300,
+  "width": "container",
   "data": {
     "url": "./data/expanded_education_employment_australia.csv"
   },

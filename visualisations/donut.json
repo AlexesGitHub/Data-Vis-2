@@ -28,22 +28,6 @@
             {"field": "Salary", "type": "quantitative", "format": "$,.0f"}
           ]
         }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "radiusOffset": -15
-        },
-        "encoding": {
-          "text": {"field": "Salary", "type": "quantitative", "format": "$,.0f"},
-          "theta": {"field": "Salary", "type": "quantitative"},
-          "color": {"field": "Income Type", "type": "nominal"},
-          "tooltip": [
-            {"field": "Year", "type": "ordinal"},
-            {"field": "Income Type", "type": "nominal"},
-            {"field": "Salary", "type": "quantitative", "format": "$,.0f"}
-          ]
-        }
       }
     ],
     "view": {"stroke": null},
