@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="sticky-header">
-        <h1>University Employment and Education Visualizations</h1>
+        <h1>A University Degree, Is It Worth It?</h1>
     </header>
 
     <div class="dashboard-container">
@@ -21,8 +21,8 @@
             <div class="card-group">
                 <div class="visualization-card">
                     <div class="visualization-text">
-                        <h2>Map: Percentage of Individuals with Bachelor's Degree by Region</h2>
-                        <p>This map shows the percentage of individuals holding a Bachelor’s degree across Australia’s regions in 2021. 
+                        <h2>Percentage of Individuals with Bachelor's Degree by Region</h2>
+                        <p>The map below shows the percentage of individuals holding a Bachelor’s degree across Australia’s regions in 2021. 
                             Notably, regions along the east coast, particularly in New South Wales and Victoria, tend to have higher 
                             concentrations of degree holders, while inland and more remote areas show lower percentages. 
                             These regional differences reflect access to universities and urban-rural disparities in education.
@@ -109,10 +109,29 @@
         </section>
 
 
+        <!-- Single Card taking up most of the width -->
+        <section class="visualization-section">
+            <div class="visualization-card full-width-card">
+                <div class="visualization-text">
+                    <h2>References and Sources</h2>
+                    <p>
+                        Data has been sourced from:<br>
+                        <a href = "https://dbr.abs.gov.au/compare.html?lyr=ste&rgn0=2&rgn1=1">1. Australian Bureau of Statistics (map data)</a><br>
+                        <a href = "https://www.abs.gov.au/statistics/people/education/qualifications-and-work/2022-23#data-downloads">2. Australian Bureau of Statistics (heatmap data)</a><br>
+                        <a href = "https://www.seek.com.au/career-advice/article/highest-paying-jobs">3. Seek Top 20 Jobs (bar chart data)</a><br>   
+                        <a href = "https://www.qilt.edu.au/surveys/graduate-outcomes-survey---longitudinal-(gos-l)">4. Graduate Outcome Survey (line chart and sankey data)</a> <br>
+                        <a href = "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/personal-income-australia/latest-release">5. Australian Bureau of Statistics (salary data for the grouped chart)</a><br>
+                        <a href = "https://www.qilt.edu.au/surveys/Data-Visualisation/gos">6. Graduate Outcome Survey (salary for undergrads by 21 years of age)</a>                          
+                        <br>
+                        I would like to acknowledge the assistance of OpenAI's ChatGPT in providing guidance on the creation and refinement of the visualizations and dashboard.
+                    </p>
+                </div>
+            </div>
+        </section>
 
 
 
-
+        <div id="end">This Dashboard Was Created By: Alex Ung <br>Visulisations Powered By: Vega & Vega-Lite </div>
     </div>
 
     <script>

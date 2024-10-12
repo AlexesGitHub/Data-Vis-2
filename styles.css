@@ -105,6 +105,12 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+#end{
+    color: #e0e0e0;
+    text-align: center;
+    
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .card-group {

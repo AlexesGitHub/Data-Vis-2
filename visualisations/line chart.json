@@ -72,7 +72,7 @@
           "field": "Completion_Rate",
           "type": "quantitative",
           "title": "Completion Rate (%)",
-          "scale":{ "domain": [0,100]}
+          "scale": { "domain": [0,100] }
         },
         "color": {
           "field": "University",
@@ -101,8 +101,8 @@
         "color": {"field": "University", "type": "nominal"},
         "tooltip": [
           {"field": "University", "type": "nominal"},
-          {"field": "Completion_Rate", "type": "quantitative"},
-          {"field": "Year_Range", "type": "ordinal"}
+          {"field": "Completion_Rate", "type": "quantitative","title": "Completion Rate"},
+          {"field": "Year_Range", "type": "ordinal","title": "Year Range"}
         ]
       }
     },
@@ -138,5 +138,10 @@
         "color": {"value": "black"}
       }
     }
-  ]
+  ],
+  "config": {
+    "tooltip": {
+      "content": "data"
+    }
+  }
 }
