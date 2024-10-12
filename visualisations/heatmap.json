@@ -1,7 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "2D Heatmap showing Employment Rates with hover interaction",
-  "title": "Relationship Between Age, Education and Employment Rate in Australia",
+  "title": {
+    "text": "Relationship Between Age, Education and Employment Rate in Australia",
+    "fontSize": 13,
+    "anchor": "start",
+    "dy": -10
+  },
   "height": 300,
   "width": "container",
   "data": {

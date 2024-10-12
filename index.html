@@ -82,7 +82,7 @@
                             2023 shows a 12.1% advantage. This may suggest an increase in salary for those without tertiary education.
                         </p>
                     </div>
-                    <div id="donut_chart" class="visualization"></div>
+                    <div id="grouped_bar" class="visualization"></div>
                 </div>
             </div>
         </section>
@@ -144,7 +144,7 @@
         }).catch(console.error);
 
         // heat map
-        vegaEmbed("#donut_chart","./visualisations/donut.json").then(function(result){
+        vegaEmbed("#grouped_bar","./visualisations/grouped_bar.json").then(function(result){
 
         }).catch(console.error);
     </script>

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Undergraduate Salary vs Median Personal Income (2016-2023)",
+    "fontSize": 13,
+    "anchor": "start",
+    "dy": -10
+  },
+  "width": "container",
+  "height": "container",
+  "data": {
+    "url": "./data/median_salaries_2016_2023.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": ["Domestic Undergraduate Median Salary", "Median Personal Income"],
+      "as": ["Income Type", "Salary"]
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "axis": {
+        "title": "Year",
+        "labelAngle": -30,
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
+    },
+    "xOffset": {
+      "field": "Income Type"
+    },
+    "y": {
+      "field": "Salary",
+      "type": "quantitative",
+      "axis": {"title": "Salary (AUD)", "titleFontSize": 14, "labelFontSize": 12}
+    },
+    "color": {
+      "field": "Income Type",
+      "type": "nominal",
+      "scale": {"range": ["#1f77b4", "#808080"]},
+      "legend": {"title": "Income Type", "labelLimit":300, "orient": "bottom"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Income Type", "type": "nominal"},
+      {"field": "Salary", "type": "quantitative", "format": "$,.0f"}
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "labelPadding": 5
+    },
+    "legend": {"labelFontSize": 12, "titleFontSize": 14}
+  }
+}
